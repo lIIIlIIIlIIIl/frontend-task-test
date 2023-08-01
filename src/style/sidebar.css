@@ -1,0 +1,81 @@
+.sidebar {
+  width: 256px;
+  height: 100%;
+  background-color: var(--color-coolgray-light1);
+  padding: 20px 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/*대메뉴*/
+
+.menu-title-fold {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 7px 28px;
+
+  color: var(--color-gray-3);
+  font-weight: var(--weight-medium);
+}
+
+.menu-title-fold:hover {
+  background-color: var(--color-coolgray-light2);
+}
+
+.menu-title-fold:active {
+  background-color: var(--color-coolgray-light4);
+  color: var(--color-gray-4);
+}
+
+.menu-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 7px 28px;
+
+  color: var(--color-gray-3);
+  font-weight: var(--weight-medium);
+}
+
+.menu-title:hover {
+  background-color: var(--color-coolgray-light2);
+}
+
+.menu-title:active {
+  color: var(--color-gray-4);
+  background-color: var(--color-coolgray-light1);
+}
+
+.menu-title-fold:active .menu-title-icon {
+  color: var(--color-gray-4);
+}
+
+.menu-title:active .menu-title-icon {
+  color: var(--color-gray-4);
+}
+
+.menu-title-icon {
+  color: var(--color-gray-1);
+}
+
+/*소메뉴*/
+
+.menu-item {
+  font-weight: var(--weight-regular);
+  padding: 6px 0 6px 40px;
+  color: var(--color-gray-2);
+}
+
+.menu-item:hover {
+  background-color: var(--color-coolgray-light2);
+}
+
+.menu-item:active {
+  color: var(--color-gray-4);
+  background-color: var(--color-coolgray-light4);
+}

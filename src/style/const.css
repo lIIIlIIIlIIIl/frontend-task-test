@@ -1,0 +1,34 @@
+@import "./reset";
+@import "./sidebar";
+
+:root {
+  font-size: 14px;
+
+  --color-gray-4: #333333;
+  --color-gray-3: #565656;
+  --color-gray-2: #777777;
+  --color-gray-1: #9ba1a7;
+
+  --color-wite: #ffffff;
+  --color-coolgray-light4: #e0e4e8;
+  --color-coolgray-light2: #f0f2f3;
+  --color-coolgray-light1: #fbfbfb;
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semi-bold: 600;
+  --weight-bold: 700;
+}
+
+#root {
+  height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+  height: 100%;
+}

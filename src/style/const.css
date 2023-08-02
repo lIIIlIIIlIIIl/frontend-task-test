@@ -1,18 +1,27 @@
 @import "./reset";
 @import "./sidebar";
+@import "./content";
 
 :root {
   font-size: 14px;
 
   --color-gray-4: #333333;
   --color-gray-3: #565656;
+  --color-gray-3: #74797d;
   --color-gray-2: #777777;
-  --color-gray-1: #9ba1a7;
+  --color-gray-1: #9c9c9c;
+  --color-gray-0: #9ba1a7;
 
   --color-wite: #ffffff;
+  --color-coolgray-light6: #bebebe;
+  --color-coolgray-light5: #dedede;
   --color-coolgray-light4: #e0e4e8;
+  --color-coolgray-light3: #f6f7f8;
   --color-coolgray-light2: #f0f2f3;
   --color-coolgray-light1: #fbfbfb;
+
+  --color-primary-light2: #dbe1fd;
+  --color-primary-default: #024eee;
 
   --weight-regular: 400;
   --weight-medium: 500;

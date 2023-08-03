@@ -6,11 +6,12 @@
 
 ---
 
-1.해당 레포지토리를 `clone`한 후 `npm install`합니다.
+1.레포지토리를 `clone`한 후 `npm install`합니다.
 
 <br/>
 
 2.서버를 실행시키기 위해서는 `mkcert`를 설치해야합니다.
+(해당 레파지토리에는 서버를 실행할 때 필요한 인증서와 키가 존재하지 않습니다.)
 
 ```bash
 $ mkcert -install
@@ -39,7 +40,7 @@ It will expire on 12 October 2023 🗓
 
 <br/>
 
-설치가 완료되면 `npm start`로 실행히키면 됩니다.( `https://localhost.json2bot.chat:3000/` )
+3.설치가 완료되면 `npm start`로 실행히키면 됩니다.( `https://localhost.json2bot.chat:3000/` )
 
 <br/>
 <br/>
@@ -55,6 +56,7 @@ src
 |    └─ common
 ├─ context
 ├─ hooks
+├─ layout
 ├─ public
 ├─ service
 ├─ style
@@ -71,6 +73,7 @@ src
 - React
 - Axios
 - React-icons
+- React-Router-Dom
 
 <br/>
 <br/>

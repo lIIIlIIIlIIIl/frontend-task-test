@@ -1,25 +1,24 @@
 import { useEffect, useState } from "react";
-import { getDataAPI } from "../api/content";
 import InfoForm from "./InfoForm";
+import { useApi } from "../context/APIContext";
 
 const Content = () => {
   const [infos, setInfos] = useState({});
+  const API = useApi();
+
+  console.log(infos);
 
   useEffect(() => {
     const getData = async () => {
-      try {
-        const { data } = await getDataAPI();
+      const response = await API.getInfo();
 
-        if (data.httpcode === 200) {
-          setInfos(data.data);
-        }
-      } catch (error) {
-        console.log(error);
+      if (response.httpcode === 200) {
+        setInfos(response.data);
       }
     };
 
     getData();
-  }, []);
+  }, [API]);
 
   return (
     <main className="content">

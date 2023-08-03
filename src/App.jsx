@@ -1,13 +1,8 @@
-import Content from "./components/Content";
-import Sidebar from "./components/Sidebar";
+import { RouterProvider } from "react-router-dom";
+import { routers } from "./routes";
 
 function App() {
-  return (
-    <div className="App">
-      <Sidebar />
-      <Content />
-    </div>
-  );
+  return <RouterProvider router={routers} />;
 }
 
 export default App;

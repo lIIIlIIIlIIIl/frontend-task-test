@@ -71,11 +71,21 @@
   color: var(--color-gray-2);
 }
 
-.menu-item:hover {
+.menu-item-link {
+  width: 100%;
+  height: 100%;
+}
+
+.menu-item-hover:hover {
   background-color: var(--color-coolgray-light2);
 }
 
 .menu-item:active {
+  color: var(--color-gray-4);
+  background-color: var(--color-coolgray-light4);
+}
+
+.menu-item-active {
   color: var(--color-gray-4);
   background-color: var(--color-coolgray-light4);
 }

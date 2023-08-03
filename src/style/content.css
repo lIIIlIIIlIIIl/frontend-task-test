@@ -279,6 +279,13 @@
   background-color: var(--color-coolgray-light3);
 }
 
+.content-radio-chose {
+  margin-top: 12px;
+  color: var(--color-red-1);
+  font-size: 12px;
+  font-weight: var(--weight-regular);
+}
+
 /*checkbox*/
 
 .content-checkbox-wrap {

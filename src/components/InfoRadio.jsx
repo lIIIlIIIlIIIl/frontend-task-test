@@ -15,16 +15,21 @@ const InfoRadio = ({ title, info }) => {
   return (
     <div className="content-form-container">
       <p className="content-form-title">{title}</p>
-      <div className="content-radio-wrap">
-        {boxOption.map((box) => (
-          <RadioItem
-            radioTitle={title}
-            title={box}
-            key={`radio-${box}`}
-            radioInfo={radioInfo}
-            chageRadio={chageRadio}
-          />
-        ))}
+      <div>
+        <div className="content-radio-wrap">
+          {boxOption.map((box) => (
+            <RadioItem
+              radioTitle={title}
+              title={box}
+              key={`radio-${box}`}
+              radioInfo={radioInfo}
+              chageRadio={chageRadio}
+            />
+          ))}
+        </div>
+        {radioInfo === "선택3" ? (
+          <p className="content-radio-chose">* 선택시 텍스트가 표시됩니다.</p>
+        ) : null}
       </div>
     </div>
   );

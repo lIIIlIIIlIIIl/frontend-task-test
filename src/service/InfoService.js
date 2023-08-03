@@ -1,3 +1,4 @@
+// 서버에 호출할 때 사용되는 함수를 담고 있는 클래스입니다.
 class InfoService {
   httpClient = null;
 

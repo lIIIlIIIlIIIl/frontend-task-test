@@ -4,6 +4,7 @@ import Selector from "./Selector";
 import { months, years } from "../../../util/selectOtion";
 import { useCalendar } from "../../../context/CalendarContext";
 
+// 연도와 월 셀릭터를 담고 있는 컴포넌트입니다.
 const YearAndMonth = () => {
   const { dateInfo, changeDate, onIncrease, onDecrease } = useCalendar();
 

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { boxOption } from "../util/boxOption";
 
+// radio 컴포넌트입니다.
 const InfoRadio = ({ title, info }) => {
   const [radioInfo, setRadioInfo] = useState("");
 

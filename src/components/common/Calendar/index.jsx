@@ -1,8 +1,9 @@
 import YearAndMonth from "./YearAndMonth";
 import Days from "./Days";
-import { useState } from "react";
 import { useCalendar } from "../../../context/CalendarContext";
 
+// 날짜 input과 캘린더를 담고 있는 컴포넌트입니다.
+// input을 클릭했을 때 focuse되어 캘린더가 보여집니다.
 const Calendar = ({ date, title }) => {
   const {
     dateInfo,

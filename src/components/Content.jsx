@@ -2,12 +2,12 @@ import { useEffect, useState } from "react";
 import InfoForm from "./InfoForm";
 import { useApi } from "../context/APIContext";
 
+// 타이틀 정보들이 담겨있는 컴포넌트입니다.
 const Content = () => {
   const [infos, setInfos] = useState({});
   const API = useApi();
 
-  console.log(infos);
-
+  // 화면이 마운트될 때마다 API를 호출해서 데이터를 가져옵니다.
   useEffect(() => {
     const getData = async () => {
       const response = await API.getInfo();

@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
+// 캘린더에서 셀렉터(년도, 월) 외부를 클릭했을 때를 감지하는 hook 입니다.
 const useOutSide = () => {
   const [isOutsidClick, setIsOutsidClick] = useState(false);
   const outsideRef = useRef(null);

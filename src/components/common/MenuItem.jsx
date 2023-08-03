@@ -2,14 +2,14 @@ import { useState } from "react";
 import { AiFillCaretDown } from "@react-icons/all-files/ai/AiFillCaretDown";
 import { AiFillCaretUp } from "@react-icons/all-files/ai/AiFillCaretUp";
 
+// 대메뉴와 소메뉴
 const MenuItem = ({ menuTitle }) => {
   const [isFold, setIsFold] = useState(false);
 
+  // 메뉴 클릭 시 메뉴가 접히고 펴지도록 상태를 변경합니다.
   const clickMenuTitle = () => {
     setIsFold((prev) => !prev);
   };
-
-  console.log(isFold);
 
   return (
     <div>

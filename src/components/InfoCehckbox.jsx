@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { boxOption } from "../util/boxOption";
 
+// 정보6 - 채크박스 컴포넌트입니다.
 const InfoCheckBox = ({ title, info }) => {
   const [checkInfo, setCheckInfo] = useState([]);
 
@@ -8,6 +9,7 @@ const InfoCheckBox = ({ title, info }) => {
     setCheckInfo(() => [...info]);
   }, [info]);
 
+  // 채크박스에서 채크된 값을 골라 배열로 만들어 값을 업데이트해주는 함수입니다.
   const chageCheckbox = (value) => {
     const updatedCheckedItems = [...checkInfo];
     const index = updatedCheckedItems.indexOf(value);

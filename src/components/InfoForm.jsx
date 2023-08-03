@@ -15,6 +15,8 @@ const InfoForm = ({
 }) => {
   const API = useApi();
 
+  // 버튼을 클릭했을 때 서버로 데이터를 전송하는 함수입니다.
+  // FormDate를 이용하여 버튼을 클릭 했을 때 input value를 가져옵니다.
   const submitForm = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
@@ -52,6 +54,7 @@ const InfoForm = ({
       }
     }
 
+    // 데이터를 서버로 post합니다.
     API.postInfo(req);
   };
 
@@ -77,6 +80,7 @@ const InfoForm = ({
 
 export default InfoForm;
 
+// 정보1, 정보3 컴포넌트
 const InfoItem = ({ title, info }) => {
   return (
     <div className="content-form-container">
@@ -86,6 +90,7 @@ const InfoItem = ({ title, info }) => {
   );
 };
 
+// 정보2, 정보4 컴포넌트
 const InfoInput = ({ title, info }) => {
   return (
     <div className="content-form-container">

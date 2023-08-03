@@ -1,6 +1,7 @@
 import { useCalendar } from "../../../context/CalendarContext";
 import useDays from "../../../hooks/useDays";
 
+// 캘린더 날짜 컴포넌트 입니다.
 const Days = () => {
   const { dateInfo, changeFocuse } = useCalendar();
   const { days } = useDays({
@@ -31,11 +32,12 @@ const DayOfWeek = () => {
     </ul>
   );
 };
-const week = ["일", "월", "화", "수", "목", "금", "토"];
 
 const DateOfWeek = ({ days, changeFocuse }) => {
   const { dateInfo, changeDate, onIncrease, onDecrease } = useCalendar();
 
+  // 날짜를 클릭했을 때 해당 날짜로 값을 업데이트하는 함수입니다.
+  // 이전 월의 날짜를 클릭했을 때 이전 월로 변경되고, 다음 월의 날짜를 클릭했을 때 다음 월로 변경됩니다.
   const clickDate = (day) => {
     const { date, month } = day;
 
@@ -74,3 +76,5 @@ const DateOfWeek = ({ days, changeFocuse }) => {
     </>
   );
 };
+
+const week = ["일", "월", "화", "수", "목", "금", "토"];

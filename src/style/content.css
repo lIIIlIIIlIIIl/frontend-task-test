@@ -27,6 +27,7 @@
 .content-info {
   border-top: 1px solid var(--color-coolgray-light4);
   border-bottom: 1px solid var(--color-coolgray-light4);
+  padding: 16px 0;
 }
 
 .content-form-info {
@@ -35,6 +36,7 @@
 }
 
 .content-form-input {
+  font-size: 1rem;
   border: 1px solid var(--color-coolgray-light5);
   padding: 5px 12px;
   border-radius: 5px;
@@ -48,6 +50,7 @@
 }
 
 .content-form-date {
+  font-size: 1rem;
   border: 1px solid var(--color-coolgray-light5);
   padding: 8px 13px;
   border-radius: 5px;
@@ -340,7 +343,7 @@
   justify-content: flex-end;
 }
 .submit-btn {
-  font-size: 14px;
+  font-size: 1rem;
   color: var(--color-wite);
   font-weight: var(--weight-regular);
   padding: 8px 24px;

@@ -1,3 +1,4 @@
+import InfoCheckBox from "./InfoCehckbox";
 import InfoDate from "./InfoDate";
 import InfoRadio from "./InfoRadio";
 
@@ -45,28 +46,6 @@ const InfoInput = ({ title, info }) => {
       <p className="content-form-title">{title}</p>
       <div>
         <input type="text" defaultValue={info} className="content-form-input" />
-      </div>
-    </div>
-  );
-};
-
-const InfoCheckBox = ({ title, date }) => {
-  return (
-    <div className="content-form-container">
-      <p className="content-form-title">{title}</p>
-      <div>
-        <div>
-          <input type="checkbox" />
-          <label htmlFor="">선택 1</label>
-        </div>
-        <div>
-          <input type="checkbox" />
-          <label htmlFor="">선택 2</label>
-        </div>
-        <div>
-          <input type="checkbox" />
-          <label htmlFor="">선택 3</label>
-        </div>
       </div>
     </div>
   );

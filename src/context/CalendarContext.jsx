@@ -5,6 +5,7 @@ export const useCalendar = () => useContext(CalendarContext);
 
 export function CalendarProvider({ children, date }) {
   const [dateInfo, setDateInfo] = useState({});
+  const [isFocuse, setIsFocuse] = useState(false);
 
   const changeDate = (info) => {
     setDateInfo((prev) => ({ ...prev, ...info }));
@@ -24,6 +25,10 @@ export function CalendarProvider({ children, date }) {
     } else {
       setDateInfo((prev) => ({ ...prev, month: 12, year: prev.year - 1 }));
     }
+  };
+
+  const changeFocuse = () => {
+    setIsFocuse((prev) => !prev);
   };
 
   useEffect(() => {
@@ -55,7 +60,14 @@ export function CalendarProvider({ children, date }) {
 
   return (
     <CalendarContext.Provider
-      value={{ dateInfo, changeDate, onIncrease, onDecrease }}
+      value={{
+        dateInfo,
+        changeDate,
+        onIncrease,
+        onDecrease,
+        isFocuse,
+        changeFocuse,
+      }}
     >
       {children}
     </CalendarContext.Provider>

@@ -2,7 +2,7 @@ import { useCalendar } from "../../../context/CalendarContext";
 import useDays from "../../../hooks/useDays";
 
 const Days = () => {
-  const { dateInfo } = useCalendar();
+  const { dateInfo, changeFocuse } = useCalendar();
   const { days } = useDays({
     year: dateInfo.year,
     month: dateInfo.month,
@@ -13,7 +13,7 @@ const Days = () => {
   return (
     <div className="days">
       <DayOfWeek />
-      <DateOfWeek days={days} />
+      <DateOfWeek days={days} changeFocuse={changeFocuse} />
     </div>
   );
 };
@@ -33,7 +33,7 @@ const DayOfWeek = () => {
 };
 const week = ["일", "월", "화", "수", "목", "금", "토"];
 
-const DateOfWeek = ({ days }) => {
+const DateOfWeek = ({ days, changeFocuse }) => {
   const { dateInfo, changeDate, onIncrease, onDecrease } = useCalendar();
 
   const clickDate = (day) => {
@@ -46,6 +46,7 @@ const DateOfWeek = ({ days }) => {
       onIncrease();
     }
     changeDate({ day: date });
+    changeFocuse();
   };
 
   return (

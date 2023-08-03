@@ -4,8 +4,14 @@ import { useState } from "react";
 import { useCalendar } from "../../../context/CalendarContext";
 
 const Calendar = ({ date, title }) => {
-  const [isFocuse, setIsFocuse] = useState(false);
-  const { dateInfo, changeDate, onIncrease, onDecrease } = useCalendar();
+  const {
+    dateInfo,
+    changeDate,
+    onIncrease,
+    onDecrease,
+    isFocuse,
+    changeFocuse,
+  } = useCalendar();
 
   return (
     <div className="content-form-container">
@@ -22,7 +28,7 @@ const Calendar = ({ date, title }) => {
               : `${dateInfo?.year}.${dateInfo?.month}.${dateInfo?.day}`
           }
           readOnly
-          onClick={() => setIsFocuse((prev) => !prev)}
+          onClick={changeFocuse}
         />
         {isFocuse ? (
           <div className="calendar">

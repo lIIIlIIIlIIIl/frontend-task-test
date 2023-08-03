@@ -15,6 +15,7 @@ const Calendar = ({ date, title }) => {
           type="text"
           placeholder="yyyy.mm.dd"
           className="content-form-date"
+          name={title}
           value={
             !date
               ? date

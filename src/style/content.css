@@ -325,3 +325,24 @@
   border: 1px solid var(--color-coolgray-light6);
   background-color: var(--color-coolgray-light3);
 }
+
+/*버튼*/
+.submit-btn-wrap {
+  margin-top: 16px;
+  display: flex;
+  justify-content: flex-end;
+}
+.submit-btn {
+  font-size: 14px;
+  color: var(--color-wite);
+  font-weight: var(--weight-regular);
+  padding: 8px 24px;
+  background-color: var(--color-primary-default);
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: var(--color-primary-dark1);
+}

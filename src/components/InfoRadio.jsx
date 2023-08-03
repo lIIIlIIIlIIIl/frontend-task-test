@@ -18,6 +18,7 @@ const InfoRadio = ({ title, info }) => {
       <div className="content-radio-wrap">
         {boxOption.map((box) => (
           <RadioItem
+            radioTitle={title}
             title={box}
             key={`radio-${box}`}
             radioInfo={radioInfo}
@@ -31,13 +32,13 @@ const InfoRadio = ({ title, info }) => {
 
 export default InfoRadio;
 
-const RadioItem = ({ title, radioInfo, chageRadio }) => {
+const RadioItem = ({ radioTitle, title, radioInfo, chageRadio }) => {
   return (
     <label className="content-radio-box">
       <input
         type="radio"
         id={title}
-        name="radio"
+        name={radioTitle}
         checked={radioInfo === title}
         value={title}
         onChange={(event) => chageRadio(event.target.value)}

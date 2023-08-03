@@ -1,3 +1,5 @@
+/* eslint-disable default-case */
+import { useApi } from "../context/APIContext";
 import InfoCheckBox from "./InfoCehckbox";
 import InfoDate from "./InfoDate";
 import InfoRadio from "./InfoRadio";
@@ -11,8 +13,50 @@ const InfoForm = ({
   info6 = [],
   date = "",
 }) => {
+  const API = useApi();
+
+  const submitForm = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    const req = {
+      date: "",
+      info2: "",
+      info4: "",
+      info5: "",
+      info6: [],
+    };
+
+    for (const entry of formData.entries()) {
+      const [infoTitle, infoData] = entry;
+
+      switch (infoTitle) {
+        case "정보2":
+          req.info2 = infoData;
+          break;
+
+        case "정보4":
+          req.info4 = infoData;
+          break;
+
+        case "날짜":
+          req.date = infoData;
+          break;
+
+        case "정보5":
+          req.info5 = infoData;
+          break;
+
+        case "정보6":
+          req.info6.push(infoData);
+          break;
+      }
+    }
+
+    API.postInfo(req);
+  };
+
   return (
-    <form className="content-form">
+    <form className="content-form" onSubmit={submitForm}>
       <div className="content-info">
         <InfoItem title="정보1" info={info1} />
         <InfoInput title="정보2" info={info2} />
@@ -22,8 +66,10 @@ const InfoForm = ({
         <InfoRadio title="정보5" info={info5} />
         <InfoCheckBox title="정보6" info={info6} />
       </div>
-      <div>
-        <button></button>
+      <div className="submit-btn-wrap">
+        <button className="submit-btn" type="submit">
+          저장
+        </button>
       </div>
     </form>
   );
@@ -45,7 +91,12 @@ const InfoInput = ({ title, info }) => {
     <div className="content-form-container">
       <p className="content-form-title">{title}</p>
       <div>
-        <input type="text" defaultValue={info} className="content-form-input" />
+        <input
+          type="text"
+          name={title}
+          defaultValue={info}
+          className="content-form-input"
+        />
       </div>
     </div>
   );

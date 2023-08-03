@@ -26,6 +26,7 @@ const InfoCheckBox = ({ title, info }) => {
       <div className="content-checkbox-wrap">
         {boxOption.map((box) => (
           <CheckboxItem
+            checkboxTitle={title}
             title={box}
             key={`radio-${box}`}
             checkInfo={checkInfo}
@@ -39,14 +40,14 @@ const InfoCheckBox = ({ title, info }) => {
 
 export default InfoCheckBox;
 
-const CheckboxItem = ({ title, checkInfo, chageCheckbox }) => {
+const CheckboxItem = ({ checkboxTitle, title, checkInfo, chageCheckbox }) => {
   const checked = checkInfo.includes(title);
   return (
     <label className="content-checkbox-box ">
       <input
         type="checkbox"
         id={title}
-        name="checkbox"
+        name={checkboxTitle}
         checked={checked}
         value={title}
         onChange={(event) => chageCheckbox(event.target.value)}

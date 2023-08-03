@@ -1,6 +1,15 @@
 import InfoDate from "./InfoDate";
+import InfoRadio from "./InfoRadio";
 
-const InfoForm = ({ info1, info2, info3, info4, info5, info6, date }) => {
+const InfoForm = ({
+  info1 = "",
+  info2 = "",
+  info3 = "",
+  info4 = "",
+  info5 = "",
+  info6 = [],
+  date = "",
+}) => {
   return (
     <form className="content-form">
       <div className="content-info">
@@ -41,28 +50,6 @@ const InfoInput = ({ title, info }) => {
   );
 };
 
-const InfoRadio = ({ title, date }) => {
-  return (
-    <div className="content-form-container">
-      <p className="content-form-title">{title}</p>
-      <div>
-        <div>
-          <input type="radio" />
-          <label htmlFor="">선택 1</label>
-        </div>
-        <div>
-          <input type="radio" />
-          <label htmlFor="">선택 2</label>
-        </div>
-        <div>
-          <input type="radio" />
-          <label htmlFor="">선택 3</label>
-        </div>
-      </div>
-    </div>
-  );
-};
-
 const InfoCheckBox = ({ title, date }) => {
   return (
     <div className="content-form-container">
@@ -84,32 +71,3 @@ const InfoCheckBox = ({ title, date }) => {
     </div>
   );
 };
-
-/*
-
-<div className="content-form-container">
-      <p className="content-form-title">{title}</p>
-      <div>
-        <input
-          type="text"
-          placeholder="yyyy.mm.dd"
-          className="content-form-date"
-          value={
-            !date
-              ? date
-              : `${dateInfo?.year}.${dateInfo?.month}.${dateInfo?.day}`
-          }
-          readOnly
-          onClick={() => setIsFocuse((prev) => !prev)}
-        />
-        {isFocuse ? (
-          <Calendar
-            dateInfo={dateInfo}
-            changeDate={changeDate}
-            onIncrease={onIncrease}
-            onDecrease={onDecrease}
-          />
-        ) : null}
-      </div>
-    </div>
-*/
